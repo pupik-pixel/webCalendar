@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>тестовый календарик</title>
+<link rel='stylesheet' href='style.css'>
+</head>
+<body>
+<div id="header">
+<button id = 'add'>Добавить</button>
+<dialog id = 'dialog1'>
+    <a id = 'exit'><img src="cross.png" width="14pt"></a><br>
+    <input id = 'addInput' type="text" size="30" placeholder="yyyy-mm-dd, событие"><br>
+    <button id = 'quickEvent'>Создать</button>   
+</dialog>
+<dialog id = 'dialog2'>
+    <a id = 'exit2'><img src="cross.png" width="14pt"></a><br>
+    <input id = 'eventInput' type="text" size="30" placeholder="Событие"><br>
+    <input id = 'date' type="date" size="30" placeholder="День, месяц, год"><br>
+    <input id = 'people' type="text" size="30" placeholder="Имена участников"><br>
+    <textarea id = 'description' cols="32" rows="5" placeholder="Описание"></textarea><br>
+    <button id="doneButton">Готово</button>
+</dialog>
+<dialog id = 'dialog3'>
+    <a id = 'exit3' onclick="dialog3.close();document.getElementById('dialogTable').remove();"><img src="cross.png" width="14pt"></a><br>
+</dialog>
+<button id = 'refresh'>Обновить</button>
+<input id = 'searchElement' type = 'search' placeholder="поиск событий">
+</div>
+<button id='left' onclick="buttonLeft()"><</button><span id = 'textMonth'>Text</span><button id="right" onclick="buttonRight()">></button>
+<button id = 'now' onclick="nowButton()">сегодня</button>
+<script src="script.js"></script>
+</body>
+</html>
